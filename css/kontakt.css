@@ -1,0 +1,261 @@
+/* Kontakt Page Styles */
+
+:root {
+    --primary-black: #0A0A0A;
+    --energy-yellow: #FFD700;
+    --industrial-gray: #2C3E50;
+    --concrete: #95A5A6;
+    --pure-white: #FFFFFF;
+    --light-gray: #F7F3F0;
+    --text-dark: #1A1A1A;
+    --text-light: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: var(--pure-white);
+    padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.kontakt-hero {
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--industrial-gray) 100%);
+    padding: 180px 0 80px;
+    text-align: center;
+    color: var(--pure-white);
+    margin-top: 0;
+}
+
+.kontakt-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.kontakt-hero p {
+    font-size: 1.3rem;
+    color: var(--energy-yellow);
+    font-weight: 500;
+}
+
+/* Kontakt Content */
+.kontakt-content {
+    padding: 100px 0;
+    background: var(--pure-white);
+}
+
+.kontakt-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kontakt-info {
+    background: var(--primary-black);
+    padding: 60px;
+    color: var(--pure-white);
+    position: relative;
+    border-radius: 5px;
+}
+
+.kontakt-info h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: var(--energy-yellow);
+}
+
+.kontakt-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.kontakt-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--energy-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.kontakt-item:hover .kontakt-icon {
+    transform: scale(1.1) rotate(-10deg);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+}
+
+.kontakt-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-black);
+}
+
+.kontakt-details h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    color: var(--energy-yellow);
+}
+
+.kontakt-details p {
+    font-size: 1.2rem;
+    color: var(--pure-white);
+    margin: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.kontakt-details a {
+    color: var(--pure-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.kontakt-details a:hover {
+    color: var(--energy-yellow);
+}
+
+/* Map Section */
+.kontakt-map {
+    position: relative;
+}
+
+.kontakt-map h2 {
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-black);
+    text-transform: uppercase;
+}
+
+.kontakt-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 18px 50px;
+    background: var(--energy-yellow);
+    color: var(--primary-black);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+    background: var(--primary-black);
+    color: var(--energy-yellow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .kontakt-hero {
+        padding: 140px 0 40px;
+    }
+
+    .kontakt-hero h1 {
+        font-size: 2rem;
+    }
+
+    .kontakt-hero p {
+        font-size: 1.1rem;
+    }
+
+    .kontakt-content {
+        padding: 60px 0;
+    }
+
+    /* Oddělení wraperu - černá krtička odděleně od mapy */
+    .kontakt-wrapper {
+        display: block;
+    }
+
+    .kontakt-info {
+        padding: 40px 30px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .kontakt-info h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Oblast působení - vycentrováno přes celou šířku obrazovky */
+    .kontakt-map {
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .kontakt-map h2 {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+        padding: 0 20px;
+    }
+
+    .kontakt-map img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0;
+    }
+}

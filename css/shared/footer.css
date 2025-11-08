@@ -1,0 +1,236 @@
+/* Footer Styles */
+footer {
+    background: var(--primary-black);
+    color: var(--pure-white);
+}
+
+/* Horní část footeru */
+.footer-top {
+    position: relative;
+    padding: 80px 0;
+    background-image: url('https://imagedelivery.net/2OhTeUm5dT07PSQroFepFw/18d9df98-339c-4143-08e2-895b4bfaba00/public');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.92);
+}
+
+.footer-top-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+}
+
+/* Logo a info sloupec */
+.footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo-wrapper {
+    display: inline-block;
+}
+
+.footer-logo {
+    height: 100px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+    background: rgba(200, 200, 200, 0.9);
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+.footer-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: var(--energy-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-black);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    background: var(--primary-black);
+    color: var(--energy-yellow);
+    border: 2px solid var(--energy-yellow);
+}
+
+/* Sloupce */
+.footer-column h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: var(--energy-yellow);
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--energy-yellow);
+}
+
+.footer-contact-item {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact-item strong {
+    color: var(--pure-white);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-contact-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+    color: var(--energy-yellow);
+}
+
+/* Dolní část footeru */
+.footer-bottom {
+    background: var(--primary-black);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-creator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-creator span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.footer-creator a {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.footer-creator a:hover {
+    transform: scale(1.05);
+}
+
+.footer-creator img {
+    height: 30px;
+    width: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 40px 0;
+    }
+
+    .footer-top-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-logo-wrapper {
+        text-align: center;
+        display: block;
+    }
+
+    .footer-logo {
+        margin: 0 auto;
+        display: inline-block;
+        height: 85px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-column h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .footer-column ul {
+        text-align: center;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-description {
+        font-size: 0.9rem;
+    }
+}
